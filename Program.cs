@@ -12,12 +12,12 @@ builder.Services
     .InitializeOnStartup()
     // Source generator. Nuget package HotChocolate.Types.Analyzers. Auto registers query type, mutation type, PersonExtensions, AssignmentExtensions etc.
     .AddTypes()
-    // Register service with HC as well known type.
     .AddFiltering()
     // Opt in to graphql mutation conventions.
     .AddMutationConventions()
     // Add query field to mutation payloads. Can be used to return data from mutations.
     .AddQueryFieldToMutationPayloads()
+    // Register service with HC as well known type.
     .RegisterService<IPersonService>()
     .RegisterService<IAssignmentService>();
 
